@@ -643,6 +643,21 @@
     margin-bottom: -4px;
   }
 
+
+  /* ── EMBEDDED SIMULATOR SLOT ── */
+  .panel-sim-slot {
+    margin-top: 36px;
+    border-top: 2px solid var(--border);
+    padding-top: 24px;
+  }
+  .panel-sim-slot:empty { display: none; }
+  .panel-sim-slot .sim-wrap {
+    border: none;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+  }
+
 </style>
 </head>
 <body>
@@ -652,8 +667,8 @@
   <div class="header-eyebrow" style="margin-bottom:20px;">
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVYAAAB4CAYAAACpftpxAAAEuWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMTIwIgogICB0aWZmOkltYWdlV2lkdGg9IjM0MiIKICAgdGlmZjpSZXNvbHV0aW9uVW5pdD0iMiIKICAgdGlmZjpYUmVzb2x1dGlvbj0iMTQ0LzEiCiAgIHRpZmY6WVJlc29sdXRpb249IjE0NC8xIgogICBleGlmOlBpeGVsWERpbWVuc2lvbj0iMzQyIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMTIwIgogICBleGlmOkNvbG9yU3BhY2U9IjEiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgeG1wOk1vZGlmeURhdGU9IjIw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" alt="Gold Grain Capital Securities" style="height:44px;display:block;">
   </div>
-  <h1><span>Investment Solutions</span><br>for Professional Investors</h1>
-  <p class="header-sub">Equity-linked notes, credit-linked notes, fund participation notes, certificates of deposit, and actively managed certificates — sourced across 27+ investment-grade issuers. For professional investors only. <em style="color:var(--gold)">GGC Securities Ltd is authorised and regulated by the FCA.</em></p>
+  <h1><span>Structured Products,</span><br>Explained Simply</h1>
+  <p class="header-sub">A beginner's guide to structured products for professional investors, advisers, and sophisticated clients. Covers equity-linked notes, credit-linked notes, fund participation notes, certificates of deposit, and actively managed certificates — sourced across 27+ investment-grade issuers. <em style="color:var(--gold)">GGC Securities Ltd is authorised and regulated by the FCA (ref: 728645).</em></p>
 </header>
 
 <div class="intro">
@@ -675,8 +690,13 @@
 
 <nav class="sidebar">
   <div class="sidebar-group">
+    <div class="sidebar-label">Start Here</div>
+    <button class="tab-btn active" onclick="switchTab('starthere', this)">What are Structured Products?</button>
+    <button class="tab-btn" onclick="switchTab('blocks', this)">Building Blocks</button>
+  </div>
+  <div class="sidebar-group">
     <div class="sidebar-label">Equity Mechanics</div>
-    <button class="tab-btn active" onclick="switchTab('autocall', this)">Autocall</button>
+    <button class="tab-btn" onclick="switchTab('autocall', this)">Autocall</button>
     <button class="tab-btn" onclick="switchTab('phoenix', this)">Phoenix &amp; Memory</button>
     <button class="tab-btn" onclick="switchTab('barrier', this)">Capital Barriers</button>
     <button class="tab-btn" onclick="switchTab('rc', this)">Reverse Convertible</button>
@@ -696,15 +716,233 @@
   </div>
   <div class="sidebar-group">
     <div class="sidebar-label">Tools</div>
-    <button class="tab-btn" onclick="switchTab('simulator', this)">Scenario Simulator</button>
+    <button class="tab-btn" onclick="switchTab('simulator', this)">Scenario Explorer</button>
     <button class="tab-btn" onclick="switchTab('comparison', this)">Full Comparison</button>
   </div>
 </nav>
 
 <div class="content">
 
+
+  <!-- ══════════════ WHAT ARE STRUCTURED PRODUCTS ══════════════ -->
+  <div id="panel-starthere" class="panel active">
+    <div class="section-title">Structured Products, Explained Simply</div>
+    <div class="section-sub">Start here — a plain-English guide before diving into specific structures</div>
+
+    <div class="feature-card full" style="margin-bottom:20px;border-left:4px solid var(--gold);padding-left:24px;">
+      <div class="fc-desc" style="font-size:15px;line-height:1.8;">
+        A <strong style="color:var(--text);font-weight:700">structured product</strong> is an investment with pre-agreed rules. Those rules determine when you receive income, when you get your capital back, and when you may lose money.<br><br>
+        Most structured products combine: a <strong style="color:var(--text);font-weight:600">note issued by a bank</strong>, an <strong style="color:var(--text);font-weight:600">underlying market</strong> (an index, share, fund or credit index), a <strong style="color:var(--text);font-weight:600">payoff formula</strong>, and <strong style="color:var(--text);font-weight:600">conditions</strong> such as barriers, coupons, caps or early redemption triggers.
+      </div>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="fc-tag tag-all">The Four Investor Questions</div>
+        <div class="fc-title">Before buying any structured product, ask these</div>
+        <div class="fc-desc">
+          <strong style="color:var(--text);font-weight:600">1. Will I get income?</strong><br>
+          Is the coupon guaranteed, conditional, or absent? If conditional — on what?<br><br>
+          <strong style="color:var(--text);font-weight:600">2. When do I get my capital back?</strong><br>
+          Is there an early redemption trigger? Can I sell before maturity? At what cost?<br><br>
+          <strong style="color:var(--text);font-weight:600">3. What market level causes a loss?</strong><br>
+          What is the barrier? Is it European (final close only) or American (any time)? How far is it from current levels?<br><br>
+          <strong style="color:var(--text);font-weight:600">4. Who am I relying on?</strong><br>
+          What bank issued the note? What happens if they default? Capital protection is only as good as the issuer's credit.
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-investor">What can go right</div>
+        <div class="fc-title">Why investors use structured products</div>
+        <div class="fc-desc">
+          <strong style="color:var(--text);font-weight:600">Higher income:</strong> Yields typically 2–5× the risk-free rate, in exchange for taking defined risks.<br><br>
+          <strong style="color:var(--text);font-weight:600">Downside protection:</strong> Capital barriers and floors absorb moderate market falls before losses occur.<br><br>
+          <strong style="color:var(--text);font-weight:600">Defined outcomes:</strong> Unlike equities, the possible payoffs are pre-defined — investors can model scenarios before committing.<br><br>
+          <strong style="color:var(--text);font-weight:600">Access to complex strategies:</strong> Twin Win, absolute return, fund participation — payoffs not available from direct investment.
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-issuer">What can go wrong</div>
+        <div class="fc-title">Risks that every investor must understand</div>
+        <div class="fc-desc">
+          <strong style="color:var(--text);font-weight:600">Issuer default:</strong> If the bank that issued the note defaults, capital protection and coupons may fail — regardless of the product's terms.<br><br>
+          <strong style="color:var(--text);font-weight:600">Barrier breach:</strong> A 70% barrier does not mean you can only lose 30%. If the index closes below 70% at maturity, you may lose from par — proportionally.<br><br>
+          <strong style="color:var(--text);font-weight:600">Selling before maturity:</strong> Capital protection applies at maturity only. Selling early may result in a loss even if the product would have paid out in full.<br><br>
+          <strong style="color:var(--text);font-weight:600">Opportunity cost:</strong> Every structured product trades something — upside cap, coupon income, or flexibility — for protection or yield.
+        </div>
+      </div>
+    </div>
+
+    <!-- Decision guide -->
+    <div class="feature-card full" style="margin-top:8px;">
+      <div class="fc-tag tag-all">Decision Guide — What does your client need?</div>
+      <div class="fc-title">Match investor objective to product family</div>
+      <div class="fc-desc" style="margin-bottom:14px;">Start here before choosing a structure. The right product depends on what the investor wants — not on the mechanics.</div>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align:left;padding:10px 14px;">Client says…</th>
+              <th style="text-align:left;padding:10px 14px;">Product family</th>
+              <th style="text-align:left;padding:10px 14px;">Main risk to explain</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:9px 14px;">"I want income if markets are flat or rising"</td><td style="padding:9px 14px;color:var(--gold);font-weight:600;">Phoenix Autocall</td><td style="padding:9px 14px;">Coupons are conditional — missed if worst-of falls below coupon barrier</td></tr>
+            <tr><td style="padding:9px 14px;">"I want guaranteed income every period"</td><td style="padding:9px 14px;color:var(--gold);font-weight:600;">Reverse Convertible</td><td style="padding:9px 14px;">Capital is at risk if index is below the low strike at maturity</td></tr>
+            <tr><td style="padding:9px 14px;">"I want markets to go up or down — I just don't want a big crash"</td><td style="padding:9px 14px;color:var(--gold);font-weight:600;">Twin Win</td><td style="padding:9px 14px;">Large falls beyond the barrier break the structure — full index loss</td></tr>
+            <tr><td style="padding:9px 14px;">"I want upside but I can't afford to lose capital"</td><td style="padding:9px 14px;color:var(--gold);font-weight:600;">Capital Protected Note</td><td style="padding:9px 14px;">Protection is only at maturity and only if the issuer does not default</td></tr>
+            <tr><td style="padding:9px 14px;">"I want higher yield — I'm comfortable with credit risk"</td><td style="padding:9px 14px;color:var(--gold);font-weight:600;">Credit-Linked Note</td><td style="padding:9px 14px;">A credit event in the reference basket can reduce capital</td></tr>
+            <tr><td style="padding:9px 14px;">"I want a short-term cash holding above bank deposit rates"</td><td style="padding:9px 14px;color:var(--gold);font-weight:600;">Certificate of Deposit</td><td style="padding:9px 14px;">Fixed return, but carries issuer credit risk and potential liquidity risk</td></tr>
+            <tr><td style="padding:9px 14px;">"I want to access a fund with downside protection"</td><td style="padding:9px 14px;color:var(--gold);font-weight:600;">Fund-Linked Note</td><td style="padding:9px 14px;">Protection only at maturity; issuer credit risk still applies</td></tr>
+            <tr><td style="padding:9px 14px;">"I want to run a strategy in a cost-efficient, tradeable wrapper"</td><td style="padding:9px 14px;color:var(--gold);font-weight:600;">AMC</td><td style="padding:9px 14px;">No capital protection — strategy risk is fully borne by the investor</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="feature-card full" style="margin-top:8px;background:rgba(230,57,70,0.05);border:1px solid rgba(230,57,70,0.2);">
+      <div class="fc-tag" style="background:rgba(230,57,70,0.12);color:var(--red);">Important</div>
+      <div class="fc-title">This guide is for professional investors and advisers</div>
+      <div class="fc-desc">
+        This educational resource is intended for <strong style="color:var(--text);font-weight:600">professional investors, financial advisers, and sophisticated clients</strong>. It does not constitute investment advice, assess suitability or appropriateness, or constitute investment research. Past performance is not indicative of future results. All structured products carry risk — including the risk of losing some or all of your capital.<br><br>
+        <strong style="color:var(--text);font-weight:600">Capital protection</strong>, where stated, applies at maturity only and is subject to the credit risk of the issuing bank. It is not a government guarantee. GGC Securities Ltd is authorised and regulated by the FCA (ref: 728645).
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ BUILDING BLOCKS ══════════════ -->
+  <div id="panel-blocks" class="panel">
+    <div class="section-title">The Building Blocks</div>
+    <div class="section-sub">Understand these terms first — they appear in every structured product</div>
+
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <div class="fc-tag tag-all">Issuer</div>
+        <div class="fc-title">The bank that creates and guarantees the note</div>
+        <div class="fc-desc">The issuer (e.g. Goldman Sachs, Barclays, BNP Paribas) creates the structured note and is legally obligated to make all payments. <strong style="color:var(--text);font-weight:600">All capital protection, coupon payments, and redemption amounts are dependent on the issuer not defaulting.</strong> Even a 100% capital protected note carries the credit risk of its issuer. GGC sources notes from 27+ investment-grade issuers (A/A+ rated) to provide access and competitive pricing.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-all">Underlying</div>
+        <div class="fc-title">The market or asset the product is linked to</div>
+        <div class="fc-desc">The underlying determines the product's payoff. Common underlyings include stock indices (Euro Stoxx 50, S&amp;P 500, Nikkei), individual equities (Nvidia, HSBC, Accenture), funds (JPMorgan Global Select), and credit indices (iTraxx Main). The underlying's performance at specific observation dates drives the income and capital outcome — the investor does not own the underlying directly.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-all">Strike / Initial Level</div>
+        <div class="fc-title">The reference point — 100% of the starting price</div>
+        <div class="fc-desc">The strike (or initial level) is the price of the underlying on the <strong style="color:var(--text);font-weight:600">trade date</strong>. It is set at 100% and becomes the reference point for all barriers, caps, and return calculations. Example: if the Euro Stoxx 50 is at 4,800 on trade date, that level = 100%. A barrier at 70% = 3,360. All future payoffs are measured as a percentage of this initial level — not in absolute points.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-all">Maturity</div>
+        <div class="fc-title">The scheduled end date of the product</div>
+        <div class="fc-desc">The maturity date is when the product expires and final payments are made. Capital protection applies <strong style="color:var(--text);font-weight:600">only at maturity</strong> — if an investor sells before maturity, the market value of the note may be below par. Most structured products have tenors of 1–5 years, with some autocall structures potentially redeeming earlier. Selling before maturity means accepting the prevailing secondary market price, which may be significantly below the protected level.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-all">Observation Date</div>
+        <div class="fc-title">The scheduled dates when conditions are checked</div>
+        <div class="fc-desc">Observation dates are the scheduled dates (typically quarterly or annually) when the product checks whether autocall, coupon, or barrier conditions are met. For most structures, <strong style="color:var(--text);font-weight:600">only the closing price on an observation date matters</strong> — not intraday levels. European barriers are checked only on the final maturity date. American barriers are checked on every observation date (or continuously) — a materially different risk.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-investor">Coupon</div>
+        <div class="fc-title">The income paid by the product</div>
+        <div class="fc-desc">
+          Coupons are either <strong style="color:var(--text);font-weight:600">guaranteed</strong> (paid regardless of market performance — Reverse Convertibles) or <strong style="color:var(--text);font-weight:600">conditional</strong> (paid only if the underlying meets a condition on the observation date — Phoenix/Autocall). Conditional coupons may be <strong style="color:var(--text);font-weight:600">memory</strong> coupons: if a coupon is missed because the underlying was below the coupon barrier, it is stored and paid at the next qualifying date. If the condition is never met again, the stored coupons may remain unpaid.
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-all">Autocall Barrier</div>
+        <div class="fc-title">The level that triggers early redemption</div>
+        <div class="fc-desc">If the underlying closes <strong style="color:var(--text);font-weight:600">at or above</strong> the autocall barrier on a scheduled observation date, the product redeems early — paying capital plus any accrued coupon. The autocall level is typically 100% of strike (the product redeems if the market is flat or higher) but can be set lower (sub-par autocall). <strong style="color:var(--text);font-weight:600">Good news:</strong> you get capital back early. <strong style="color:var(--text);font-weight:600">Bad news:</strong> you stop earning coupons and must reinvest at prevailing — potentially lower — rates.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-all">Coupon Barrier</div>
+        <div class="fc-title">The level the underlying must be above to earn a coupon</div>
+        <div class="fc-desc">The coupon barrier is a <strong style="color:var(--text);font-weight:600">separate</strong> threshold from the capital barrier. If the underlying is below the coupon barrier on an observation date, no coupon is paid that period (it may be stored as memory). The coupon barrier is typically set at 60–75% of strike. A product can have a 70% coupon barrier and a 70% capital barrier as separate rules — though they are often set at the same level.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-issuer">Capital Barrier (KI)</div>
+        <div class="fc-title">The level that puts your invested capital at risk</div>
+        <div class="fc-desc">
+          The capital barrier (knock-in, or KI) is the level below which the investor's capital is no longer protected. <strong style="color:var(--text);font-weight:600">Critical:</strong> a 70% barrier does not mean you can only lose 30%. If the underlying finishes at 55% of strike, you receive 55% of capital — a 45% capital loss.<br><br>
+          <strong style="color:var(--text);font-weight:600">European KI</strong> (most common): only the final maturity closing price is checked — intraday or interim lows do not matter.<br>
+          <strong style="color:var(--text);font-weight:600">American KI</strong>: any closing price (or continuous trading) below the barrier permanently triggers the knock-in.
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-all">Low Strike</div>
+        <div class="fc-title">The put option strike in Reverse Convertibles — creates geared loss</div>
+        <div class="fc-desc">In a Reverse Convertible, the investor sells a put option struck at the low strike level (typically 75–85% of initial). Unlike a simple capital barrier, the low strike creates a <strong style="color:var(--text);font-weight:600">geared loss</strong> below the strike: capital returned = (final level ÷ low strike) × 100. Example: index at 60%, low strike 80% → capital = 60/80 × 100 = 75%. The loss accelerates below the strike because of the put option mechanics — not 1-for-1 from par.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-all">Participation &amp; Cap</div>
+        <div class="fc-title">How much upside the investor receives — and its ceiling</div>
+        <div class="fc-desc">Participation is the percentage of the underlying's gain that the investor receives. 100% = same as the index. 112% = investor earns 12% more than the index gain. A cap is the maximum gain (e.g. +25% for Twin Win, +40.95% for Capital Protected USD). Capped upside is the price of downside protection or enhanced participation — the premium from the sold call funds the floor or the absolute-return feature.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-issuer">Worst-of</div>
+        <div class="fc-title">The weakest asset in a basket determines your capital</div>
+        <div class="fc-desc">
+          <strong style="color:var(--text);font-weight:600">Worst-of does not mean diversified protection. It means the weakest asset controls the result.</strong><br><br>
+          In a worst-of basket of 3 stocks, the capital barrier is measured against the worst-performing stock at maturity — regardless of what the other two do. If one stock falls 50% below its individual strike, your capital is affected even if the other two are up 80%. The higher coupon on worst-of products compensates for this concentration risk.
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-issuer">Issuer Credit Risk</div>
+        <div class="fc-title">The risk that the bank that issued your note defaults</div>
+        <div class="fc-desc">Every structured note carries issuer credit risk — the risk that the issuing bank defaults before or at maturity. If the issuer defaults, capital protection and coupons may not be paid, regardless of the product's terms. This is distinct from market risk. GGC mitigates this by sourcing from 27+ A/A+ rated banks, but <strong style="color:var(--text);font-weight:600">an issuer rating is not a guarantee. Always consider the issuer's creditworthiness as a separate risk factor.</strong></div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-tag tag-all">Secondary Market / Liquidity</div>
+        <div class="fc-title">What happens if you need to sell before maturity</div>
+        <div class="fc-desc">Structured notes can typically be sold before maturity via the issuer's secondary market or a broker. However, the secondary market price reflects current market conditions — it may be <strong style="color:var(--text);font-weight:600">significantly below par</strong>, especially early in the note's life or during market stress. Capital protection applies at maturity only. Selling early means accepting the prevailing bid price. Investors should treat structured products as held-to-maturity instruments unless they are prepared to absorb secondary market risk.</div>
+      </div>
+
+    </div>
+
+    <!-- Barrier comparison table -->
+    <div class="feature-card full" style="margin-top:8px;">
+      <div class="fc-tag tag-all">The four most confused terms — side by side</div>
+      <div class="fc-title">Strike vs Autocall vs Coupon Barrier vs Capital Barrier</div>
+      <div style="overflow-x:auto;margin-top:12px;">
+        <table>
+          <thead>
+            <tr>
+              <th style="padding:10px 14px;text-align:left;">Term</th>
+              <th style="padding:10px 14px;text-align:left;">Typical level</th>
+              <th style="padding:10px 14px;text-align:left;">What it triggers</th>
+              <th style="padding:10px 14px;text-align:left;">Checked when?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:9px 14px;font-weight:600;">Strike / Initial Level</td><td style="padding:9px 14px;">100%</td><td style="padding:9px 14px;">Nothing — it is the reference point for all other levels</td><td style="padding:9px 14px;">Set once on trade date</td></tr>
+            <tr><td style="padding:9px 14px;font-weight:600;">Autocall Barrier</td><td style="padding:9px 14px;">100% (can be sub-par)</td><td style="padding:9px 14px;">Early redemption — product pays capital + coupon and terminates</td><td style="padding:9px 14px;">Each scheduled observation date</td></tr>
+            <tr><td style="padding:9px 14px;font-weight:600;">Coupon Barrier</td><td style="padding:9px 14px;">60–75% of strike</td><td style="padding:9px 14px;">Income — coupon paid if above; deferred (memory) or lost if below</td><td style="padding:9px 14px;">Each scheduled observation date</td></tr>
+            <tr><td style="padding:9px 14px;font-weight:600;">Capital Barrier (KI)</td><td style="padding:9px 14px;">60–80% of strike</td><td style="padding:9px 14px;">Capital at risk — below this level at maturity, losses occur from par</td><td style="padding:9px 14px;">Final maturity date only (European)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
   <!-- ══════════════ AUTOCALL ══════════════ -->
-  <div id="panel-autocall" class="panel active">
+  <div id="panel-autocall" class="panel">
     <div class="section-title">Autocall</div>
     <div class="section-sub">The early redemption mechanism that terminates the product if underlyings perform well</div>
 
@@ -767,6 +1005,9 @@
         </div>
       </div>
     </div>
+
+
+    <div class="panel-sim-slot" id="sim-slot-autocall"></div>
   </div>
 
   <!-- ══════════════ PHOENIX / MEMORY ══════════════ -->
@@ -787,12 +1028,22 @@
 
       <div class="feature-card">
         <div class="fc-tag tag-investor">Why the Memory matters</div>
-        <div class="fc-title">You never permanently lose a coupon</div>
-        <div class="fc-desc">Without memory: if MSTR drops 30% in Q1, you get nothing. It recovers in Q2 — you get Q2 coupon only. You lost Q1 forever. <strong style="color:var(--text);font-weight:600">With memory:</strong> Q1 is remembered. When Q2 coupon triggers, you receive <em>both</em> Q1 and Q2 together. Your total return is not permanently impaired by a single bad quarter.</div>
+        <div class="fc-title">Missed coupons are deferred — not automatically recovered</div>
+        <div class="fc-desc">Without memory: if a coupon is missed in Q1, it is lost permanently. <strong style="color:var(--text);font-weight:600">With memory:</strong> the missed Q1 coupon is stored. When the coupon condition is next met (e.g. Q2), you receive both Q1 and Q2 together. <strong style="color:var(--text);font-weight:600">Important:</strong> if the coupon condition is never met again for the rest of the product's life, the stored coupons remain unpaid. Memory defers — it does not guarantee recovery.</div>
         <div class="example-box">
           <strong>GGC 2Y One Star Phoenix — Nvidia / Barclays / Accenture basket, 70% barriers, <span style="color:var(--gold-light)">15.77% p.a.</span></strong>
-          Q1: Nvidia drops to 65% (below 70% coupon barrier). No coupon. Memory stores 3.94% (15.77%/4).
-          Q2: Nvidia recovers to 75% (above barrier). Investor receives <strong style="color:var(--text);font-weight:600">7.88%</strong> — both Q1 and Q2 paid together thanks to memory.
+          <strong>Memory in action — quarterly timeline</strong><br><br>
+          <table style="width:100%;font-size:12px;margin-top:8px;">
+            <thead><tr><th style="text-align:left;padding:5px 8px;">Quarter</th><th style="text-align:right;padding:5px 8px;">Worst-of level</th><th style="text-align:right;padding:5px 8px;">Coupon paid?</th><th style="text-align:right;padding:5px 8px;">Memory balance</th></tr></thead>
+            <tbody>
+              <tr><td style="padding:5px 8px;">Q1</td><td style="text-align:right;padding:5px 8px;">68%</td><td style="text-align:right;padding:5px 8px;color:var(--red);">No (below 70%)</td><td style="text-align:right;padding:5px 8px;">1 coupon stored</td></tr>
+              <tr><td style="padding:5px 8px;">Q2</td><td style="text-align:right;padding:5px 8px;">74%</td><td style="text-align:right;padding:5px 8px;color:var(--green);">Yes — Q1+Q2 paid</td><td style="text-align:right;padding:5px 8px;">0 stored</td></tr>
+              <tr><td style="padding:5px 8px;">Q3</td><td style="text-align:right;padding:5px 8px;">62%</td><td style="text-align:right;padding:5px 8px;color:var(--red);">No (below 70%)</td><td style="text-align:right;padding:5px 8px;">1 coupon stored</td></tr>
+              <tr><td style="padding:5px 8px;">Q4</td><td style="text-align:right;padding:5px 8px;">58%</td><td style="text-align:right;padding:5px 8px;color:var(--red);">No (below 70%)</td><td style="text-align:right;padding:5px 8px;">2 stored — may remain unpaid</td></tr>
+              <tr><td style="padding:5px 8px;">Q5</td><td style="text-align:right;padding:5px 8px;">76%</td><td style="text-align:right;padding:5px 8px;color:var(--green);">Yes — Q3+Q4+Q5 paid</td><td style="text-align:right;padding:5px 8px;">0 stored</td></tr>
+            </tbody>
+          </table><br>
+          If Q4 were the final maturity date and worst-of closed at 58%: stored coupons for Q3 remain unpaid <em>and</em> the capital barrier (if 70%) would be breached.
         </div>
       </div>
 
@@ -828,6 +1079,9 @@
         </div>
       </div>
     </div>
+
+
+    <div class="panel-sim-slot" id="sim-slot-phoenix"></div>
   </div>
 
   <!-- ══════════════ BARRIERS ══════════════ -->
@@ -884,6 +1138,9 @@
       </table>
       <div style="margin-top:12px;font-size:12px;color:var(--muted)">Note: For worst-of baskets, the barrier only needs ONE underlying to breach — not all. This is critical and significantly changes probability.</div>
     </div>
+
+
+    <div class="panel-sim-slot" id="sim-slot-barrier"></div>
   </div>
 
   <!-- ══════════════ REVERSE CONVERTIBLE ══════════════ -->
@@ -931,6 +1188,34 @@
           The strike creates a clearly defined liability profile. The issuer knows exactly at what level the note becomes "in the money" for the short put. Combined with the autocall feature, the expected duration shortens, reducing hedging complexity further.
         </div>
       </div>
+
+      <div class="feature-card full">
+        <div class="fc-tag tag-issuer">Payoff table — 80% Low Strike RC (10.36% p.a., 18m = 15.54% total)</div>
+        <div class="fc-title">Below the low strike, losses are geared — not 1-for-1</div>
+        <div style="overflow-x:auto;margin-top:12px;">
+          <table>
+            <thead>
+              <tr>
+                <th style="padding:9px 14px;text-align:right;">Index at maturity</th>
+                <th style="padding:9px 14px;text-align:right;">Capital returned</th>
+                <th style="padding:9px 14px;text-align:right;">+ Coupon</th>
+                <th style="padding:9px 14px;text-align:right;">Total return</th>
+                <th style="padding:9px 14px;text-align:left;">Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style="text-align:right;padding:8px 14px;">100%</td><td style="text-align:right;padding:8px 14px;">100.00%</td><td style="text-align:right;padding:8px 14px;">15.54%</td><td style="text-align:right;padding:8px 14px;color:var(--green);font-weight:600;">115.54%</td><td style="padding:8px 14px;">Protected — above low strike</td></tr>
+              <tr><td style="text-align:right;padding:8px 14px;">85%</td><td style="text-align:right;padding:8px 14px;">100.00%</td><td style="text-align:right;padding:8px 14px;">15.54%</td><td style="text-align:right;padding:8px 14px;color:var(--green);font-weight:600;">115.54%</td><td style="padding:8px 14px;">Protected — above low strike</td></tr>
+              <tr><td style="text-align:right;padding:8px 14px;">80%</td><td style="text-align:right;padding:8px 14px;">100.00%</td><td style="text-align:right;padding:8px 14px;">15.54%</td><td style="text-align:right;padding:8px 14px;color:var(--green);font-weight:600;">115.54%</td><td style="padding:8px 14px;">Exactly at low strike — still protected</td></tr>
+              <tr><td style="text-align:right;padding:8px 14px;">75%</td><td style="text-align:right;padding:8px 14px;">93.75%</td><td style="text-align:right;padding:8px 14px;">15.54%</td><td style="text-align:right;padding:8px 14px;color:var(--gold);">109.29%</td><td style="padding:8px 14px;">75÷80×100 = 93.75</td></tr>
+              <tr><td style="text-align:right;padding:8px 14px;">60%</td><td style="text-align:right;padding:8px 14px;">75.00%</td><td style="text-align:right;padding:8px 14px;">15.54%</td><td style="text-align:right;padding:8px 14px;color:var(--gold);">90.54%</td><td style="padding:8px 14px;">60÷80×100 = 75</td></tr>
+              <tr><td style="text-align:right;padding:8px 14px;">40%</td><td style="text-align:right;padding:8px 14px;">50.00%</td><td style="text-align:right;padding:8px 14px;">15.54%</td><td style="text-align:right;padding:8px 14px;color:var(--red);font-weight:600;">65.54%</td><td style="padding:8px 14px;">40÷80×100 = 50 — gearing accelerates</td></tr>
+              <tr><td style="text-align:right;padding:8px 14px;">20%</td><td style="text-align:right;padding:8px 14px;">25.00%</td><td style="text-align:right;padding:8px 14px;">15.54%</td><td style="text-align:right;padding:8px 14px;color:var(--red);font-weight:600;">40.54%</td><td style="padding:8px 14px;">20÷80×100 = 25 — severe crash</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="example-box" style="margin-top:12px;">Below the 80% low strike, losses accelerate because redemption is calculated as final level ÷ strike. A 1-for-1 barrier note at 70% would return 60% of capital at index=60%; this RC returns 75% at the same level — the strike absorbs some loss. But the RC loses capital sooner (below 80% vs below 70% for a barrier note).</div>
+      </div>
     </div>
 
     <div class="feature-card">
@@ -949,12 +1234,21 @@
         </div>
       </div>
     </div>
+
+
+    <div class="panel-sim-slot" id="sim-slot-rc"></div>
   </div>
 
   <!-- ══════════════ WORST-OF ══════════════ -->
   <div id="panel-worstof" class="panel">
     <div class="section-title">Worst-of Basket</div>
     <div class="section-sub">How using multiple underlyings dramatically enhances yield — and risk</div>
+
+    <div class="feature-card full" style="background:rgba(230,57,70,0.06);border:1px solid rgba(230,57,70,0.25);margin-bottom:8px;">
+      <div class="fc-tag" style="background:rgba(230,57,70,0.12);color:var(--red);">Critical concept</div>
+      <div class="fc-title" style="color:var(--red);">Worst-of does not mean diversified protection</div>
+      <div class="fc-desc"><strong style="color:var(--text);font-weight:700">It means the weakest asset controls the result.</strong> If a basket has 3 stocks and one falls 60% below its strike at maturity, your capital is impaired — even if the other two are up 80%. The higher coupon on worst-of structures compensates for this concentration risk. Before buying a worst-of product, always ask: what is the most plausible scenario in which the weakest stock falls below the barrier?</div>
+    </div>
 
     <div class="feature-grid">
       <div class="feature-card full">
@@ -1009,6 +1303,9 @@
         </div>
       </div>
     </div>
+
+
+    <div class="panel-sim-slot" id="sim-slot-worstof"></div>
   </div>
 
   <!-- ══════════════ TWIN WIN ══════════════ -->
@@ -1059,13 +1356,16 @@
         </div>
       </div>
     </div>
+
+
+    <div class="panel-sim-slot" id="sim-slot-twinwin"></div>
   </div>
 
 
   <!-- ══════════════ CAPITAL PROTECTED NOTES ══════════════ -->
   <div id="panel-capital" class="panel">
     <div class="section-title">Capital Protected Notes on Indices</div>
-    <div class="section-sub">100% capital protection at maturity with leveraged upside participation — subject to issuer credit risk</div>
+    <div class="section-sub">100% capital protection at maturity (subject to issuer credit risk) with leveraged upside participation — subject to issuer credit risk</div>
 
     <div class="feature-grid">
       <div class="feature-card full">
@@ -1182,6 +1482,9 @@
         </div>
       </div>
     </div>
+
+
+    <div class="panel-sim-slot" id="sim-slot-capital"></div>
   </div>
 
   <!-- ══════════════ CREDIT LINKED NOTES ══════════════ -->
@@ -1274,6 +1577,9 @@
         </div>
       </div>
     </div>
+
+
+    <div class="panel-sim-slot" id="sim-slot-cln"></div>
   </div>
 
   <!-- ══════════════ CERTIFICATES OF DEPOSIT ══════════════ -->
@@ -1361,6 +1667,9 @@
         <div class="example-box" style="margin-top:14px;"><strong>Also available:</strong> EUR (vs EURIBOR 2.10%/2.20%), CAD (vs Treasury Bill 2.40%), and AUD (vs BBSW 3.90%). GCC-region banks including Qatar National Bank and Abu Dhabi Commercial Bank appear consistently across all currencies — particularly relevant for GCC-based investors.</div>
       </div>
     </div>
+
+
+    <div class="panel-sim-slot" id="sim-slot-cd"></div>
   </div>
 
   <!-- ══════════════ FUND LINKED NOTES ══════════════ -->
@@ -1372,7 +1681,7 @@
       <div class="feature-card full">
         <div class="fc-tag tag-all">The Structure</div>
         <div class="fc-title">Access institutional funds with built-in capital protection</div>
-        <div class="fc-desc">The Capital Guaranteed Participation Note wraps a fund (managed by BlackRock, PIMCO, JPMorgan, Goldman Sachs, etc.) in a 5-year structured note with <strong style="color:var(--text);font-weight:600">100% capital protection at maturity</strong> (subject to issuer credit risk). The investor gains <em>leveraged</em> upside participation (often 100–123%) in the fund's positive performance, capped or uncapped depending on the structure.<br><br>
+        <div class="fc-desc">The Capital Guaranteed Participation Note wraps a fund (managed by BlackRock, PIMCO, JPMorgan, Goldman Sachs, etc.) in a 5-year structured note with <strong style="color:var(--text);font-weight:600">100% capital protection at maturity (subject to issuer credit risk)</strong> (subject to issuer credit risk). The investor gains <em>leveraged</em> upside participation (often 100–123%) in the fund's positive performance, capped or uncapped depending on the structure.<br><br>
         <strong>Payoff:</strong> Fund up → 100% + (Leverage × Fund Performance) &nbsp;|&nbsp; Fund down → 100% back</div>
       </div>
 
@@ -1454,6 +1763,9 @@
         <div class="example-box" style="margin-top:12px;"><strong>How to read the cap:</strong> "292%" on the AI fund means if the fund gains 50%, the investor receives 100% + 50% = 150% at maturity. The cap is reached only if the fund appreciates by 192% — a 5-year fund return that would historically be extraordinary.</div>
       </div>
     </div>
+
+
+    <div class="panel-sim-slot" id="sim-slot-fln"></div>
   </div>
 
   <!-- ══════════════ ACTIVELY MANAGED CERTIFICATES ══════════════ -->
@@ -1483,8 +1795,8 @@
         <div class="fc-tag tag-investor">Three Issuer Structures</div>
         <div class="fc-title">Luxembourg SPV · Guernsey SPV · Bank</div>
         <div class="fc-desc">
-          <strong style="color:var(--text);font-weight:600">Luxembourg SPV</strong> — No issuer risk. XS ISIN under English law. Available to retail AND professional investors.<br><br>
-          <strong style="color:var(--text);font-weight:600">Guernsey SPV</strong> — No issuer risk. CH ISIN under Swiss law. Professional investors only.<br><br>
+          <strong style="color:var(--text);font-weight:600">Luxembourg SPV</strong> — Reduced issuer balance-sheet risk via asset segregation (bankruptcy-remote). XS ISIN under English law. Available to retail AND professional investors.<br><br>
+          <strong style="color:var(--text);font-weight:600">Guernsey SPV</strong> — Reduced issuer balance-sheet risk via asset segregation (bankruptcy-remote). CH ISIN under Swiss law. Professional investors only.<br><br>
           <strong style="color:var(--text);font-weight:600">Bank-issued</strong> — Carries issuer risk (mitigable via Triparty Collateral Management). CH ISIN. Professional investors only.<br><br>
           Both SPV structures are <strong style="color:var(--text);font-weight:600">bankruptcy-remote</strong> — the underlying assets are segregated from the issuer balance sheet, meaning investors are protected if the issuer defaults.
         </div>
@@ -1505,463 +1817,21 @@
         </div>
       </div>
     </div>
-  </div>
 
 
-  <!-- ══════════════ CAPITAL PROTECTED NOTES ══════════════ -->
-  <div id="panel-capital" class="panel">
-    <div class="section-title">Capital Protected Notes on Indices</div>
-    <div class="section-sub">100% capital protection at maturity with leveraged upside participation — subject to issuer credit risk</div>
-
-    <div class="feature-grid">
-      <div class="feature-card full">
-        <div class="fc-tag tag-all">Core Mechanic</div>
-        <div class="fc-title">How it works</div>
-        <div class="fc-desc">The Capital Protected Note combines a <strong style="color:var(--text);font-weight:600">zero-coupon bond</strong> (which matures at 100% to guarantee capital) with a <strong style="color:var(--text);font-weight:600">call option</strong> on the underlying index. At maturity:<br><br>
-        • If the index is <strong style="color:var(--text);font-weight:600">positive</strong>: investor receives 100% + (Leverage × Performance), capped if applicable<br>
-        • If the index is <strong style="color:var(--text);font-weight:600">negative</strong>: investor receives exactly 100% back<br><br>
-        Capital protection is at maturity only — the note's value during its lifetime may be lower. Protection is subject to <strong style="color:var(--text);font-weight:600">issuer credit risk</strong> (all issuers are A/A+ rated).</div>
-
-        <div class="flow" style="margin-top:20px;">
-          <div class="flow-box"><strong>Index +30%</strong><small>Above cap</small></div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-box highlight"><strong>100% + cap</strong><small>e.g. 100%+25%=125%</small></div>
-          <div class="flow-arrow" style="margin-left:16px;"></div>
-          <div class="flow-box"><strong>Index +15%</strong></div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-box highlight"><strong>100% + 15%</strong><small>Full participation</small></div>
-          <div class="flow-arrow" style="margin-left:16px;"></div>
-          <div class="flow-box"><strong>Index −20%</strong></div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-box" style="border-color:var(--teal)"><strong>100%</strong><small>Capital returned</small></div>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="fc-tag tag-investor">Current GGC Pricings — USD</div>
-        <div class="fc-title">3Y & 5Y Capital Protected (USD)</div>
-        <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:10px;">
-          <thead>
-            <tr style="border-bottom:1px solid var(--border);">
-              <th style="padding:6px;text-align:left;color:var(--gold);">Index</th>
-              <th style="padding:6px;text-align:center;color:var(--gold);">3Y Cap</th>
-              <th style="padding:6px;text-align:center;color:var(--gold);">5Y Cap</th>
-              <th style="padding:6px;text-align:center;color:var(--gold);">5Y Lev.</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:6px;">S&amp;P 500 (SPX)</td>
-              <td style="padding:6px;text-align:center;color:#fff;">21.20%</td>
-              <td style="padding:6px;text-align:center;color:var(--gold-light);">40.95%</td>
-              <td style="padding:6px;text-align:center;">100%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:6px;">Nasdaq 100 (NDX)</td>
-              <td style="padding:6px;text-align:center;color:#fff;">22.85%</td>
-              <td style="padding:6px;text-align:center;color:var(--gold-light);">43.42%</td>
-              <td style="padding:6px;text-align:center;">100%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:6px;">Russell 2000 (RTY)</td>
-              <td style="padding:6px;text-align:center;color:#fff;">23.21%</td>
-              <td style="padding:6px;text-align:center;color:var(--gold-light);">49.88%</td>
-              <td style="padding:6px;text-align:center;">100%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:6px;">Euro Stoxx 50</td>
-              <td style="padding:6px;text-align:center;color:#fff;">40.13%</td>
-              <td style="padding:6px;text-align:center;color:var(--gold-light);">Uncapped</td>
-              <td style="padding:6px;text-align:center;">114%</td>
-            </tr>
-            <tr>
-              <td style="padding:6px;">Swiss SMI</td>
-              <td style="padding:6px;text-align:center;color:#fff;">Uncapped</td>
-              <td style="padding:6px;text-align:center;color:var(--gold-light);">Uncapped</td>
-              <td style="padding:6px;text-align:center;">134% / 185%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="feature-card">
-        <div class="fc-tag tag-investor">EUR Pricings</div>
-        <div class="fc-title">3Y & 5Y Capital Protected (EUR)</div>
-        <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:10px;">
-          <thead>
-            <tr style="border-bottom:1px solid var(--border);">
-              <th style="padding:6px;text-align:left;color:var(--gold);">Index</th>
-              <th style="padding:6px;text-align:center;color:var(--gold);">3Y Cap</th>
-              <th style="padding:6px;text-align:center;color:var(--gold);">5Y Cap</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:6px;">S&amp;P 500</td>
-              <td style="padding:6px;text-align:center;">12.43%</td>
-              <td style="padding:6px;text-align:center;color:var(--gold-light);">24.15%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:6px;">Nasdaq 100</td>
-              <td style="padding:6px;text-align:center;">13.54%</td>
-              <td style="padding:6px;text-align:center;color:var(--gold-light);">25.61%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:6px;">Euro Stoxx 50</td>
-              <td style="padding:6px;text-align:center;">18.40%</td>
-              <td style="padding:6px;text-align:center;color:var(--gold-light);">42.53%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:6px;">FTSE MIB</td>
-              <td style="padding:6px;text-align:center;">27.23%</td>
-              <td style="padding:6px;text-align:center;color:var(--gold-light);">Uncapped</td>
-            </tr>
-            <tr>
-              <td style="padding:6px;">SMI</td>
-              <td style="padding:6px;text-align:center;">29.70%</td>
-              <td style="padding:6px;text-align:center;color:var(--gold-light);">Uncapped</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="example-box" style="margin-top:14px;">
-          <strong>Key insight:</strong> EUR rates are lower than USD rates (lower EURIBOR vs SOFR), meaning a smaller zero-coupon component cost → smaller call option budget → lower cap. USD products consistently offer 60–80% higher caps than equivalent EUR products.
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ══════════════ CREDIT LINKED NOTES ══════════════ -->
-  <div id="panel-cln" class="panel">
-    <div class="section-title">Credit-Linked Notes</div>
-    <div class="section-sub">Higher yield in exchange for credit exposure — range accruals, iTraxx baskets, and corporate single-name CLNs</div>
-
-    <div class="feature-grid">
-      <div class="feature-card full">
-        <div class="fc-tag tag-all">What is a Credit-Linked Note?</div>
-        <div class="fc-title">Bond + Credit Default Swap = CLN</div>
-        <div class="fc-desc">A Credit-Linked Note (CLN) embeds a <strong style="color:var(--text);font-weight:600">credit default swap (CDS)</strong> into a bond. The investor lends money to the issuer AND simultaneously sells protection on a reference entity (or basket). In exchange for accepting this additional credit risk, the investor earns a <strong style="color:var(--text);font-weight:600">significantly higher coupon</strong> than a plain bond from the same issuer.<br><br>
-        <strong style="color:var(--text);font-weight:600">Key risk:</strong> if a <em>credit event</em> (default, restructuring, failure-to-pay) occurs on the reference entity, the investor receives the <em>market recovery value</em> defined by ISDA rather than 100% of capital.</div>
-      </div>
-
-      <div class="feature-card">
-        <div class="fc-tag tag-investor">Product 1: Range Accrual CLN</div>
-        <div class="fc-title">Two risks, one note: rate range + credit</div>
-        <div class="fc-desc">This structure pays a <strong style="color:var(--text);font-weight:600">variable coupon</strong> based on the number of days the 10Y US Treasury CMT rate stays within a specified range — PLUS the investor accepts credit risk on a reference entity. Annual issuer call option. 5Y maturity. Full capital at risk.<br><br>
-        <strong>Formula:</strong> Coupon = X% × (days in range / total days)</div>
-        <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:12px;">
-          <thead>
-            <tr style="border-bottom:1px solid var(--border);">
-              <th style="padding:5px;text-align:left;color:var(--gold);">Reference Entity</th>
-              <th style="padding:5px;text-align:center;color:var(--gold);">Range [0%, 5%] / 5Y</th>
-              <th style="padding:5px;text-align:center;color:var(--gold);">Range [0%, 5.5%] / 5Y</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">No extra credit risk</td>
-              <td style="padding:5px;text-align:center;">6.01%</td>
-              <td style="padding:5px;text-align:center;">5.11%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">Nestlé</td>
-              <td style="padding:5px;text-align:center;">6.14%</td>
-              <td style="padding:5px;text-align:center;">5.29%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">UBS Group</td>
-              <td style="padding:5px;text-align:center;">6.43%</td>
-              <td style="padding:5px;text-align:center;">5.55%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">Volkswagen</td>
-              <td style="padding:5px;text-align:center;">6.90%</td>
-              <td style="padding:5px;text-align:center;">5.98%</td>
-            </tr>
-            <tr>
-              <td style="padding:5px;">Republic of Brazil</td>
-              <td style="padding:5px;text-align:center;color:var(--gold-light);">7.53%</td>
-              <td style="padding:5px;text-align:center;">6.54%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="feature-card">
-        <div class="fc-tag tag-investor">Product 2: iTraxx Main S44 CLN</div>
-        <div class="fc-title">125 investment-grade European companies, 5Y, EUR</div>
-        <div class="fc-desc">The iTraxx Main S44 is a standardised index of 125 investment-grade European companies (Barclays, LVMH, Shell, Siemens, Nestlé, Airbus…). This CLN provides exposure to that basket with <strong style="color:var(--text);font-weight:600">tranche protection</strong>:<br><br>
-        Capital and coupons are only reduced <em>after</em> a minimum number of credit events (attachment point) is exceeded. Over 20 years / 44 series, the maximum credit events in any 5-year period has never exceeded 1.</div>
-        <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:12px;">
-          <thead>
-            <tr style="border-bottom:1px solid var(--border);">
-              <th style="padding:5px;text-align:left;color:var(--gold);">Tranche</th>
-              <th style="padding:5px;text-align:center;color:var(--gold);">Attach</th>
-              <th style="padding:5px;text-align:center;color:var(--gold);">Detach</th>
-              <th style="padding:5px;text-align:center;color:var(--gold);">Coupon p.a.</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">#1 (3-6 events)</td>
-              <td style="padding:5px;text-align:center;">3</td>
-              <td style="padding:5px;text-align:center;">6</td>
-              <td style="padding:5px;text-align:center;color:var(--gold-light);font-weight:bold;">7.20%</td>
-            </tr>
-            <tr>
-              <td style="padding:5px;">#2 (4-7 events)</td>
-              <td style="padding:5px;text-align:center;">4</td>
-              <td style="padding:5px;text-align:center;">7</td>
-              <td style="padding:5px;text-align:center;color:var(--gold-light);font-weight:bold;">6.20%</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="example-box" style="margin-top:14px;">
-          <strong>Historical context:</strong> Since the iTraxx index launched in 2004, only 5 credit events occurred across 44 series. The last 20 series (10 years) have experienced <strong style="color:var(--text);font-weight:600">zero credit events</strong>. Tranche #1 requires 3 defaults before any loss is incurred.
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ══════════════ CERTIFICATES OF DEPOSIT ══════════════ -->
-  <div id="panel-cd" class="panel">
-    <div class="section-title">Certificates of Deposit</div>
-    <div class="section-sub">Competitive multi-currency short-term deposits from investment-grade banks worldwide</div>
-
-    <div class="feature-grid">
-      <div class="feature-card full">
-        <div class="fc-tag tag-all">What are Certificates of Deposit?</div>
-        <div class="fc-title">Fixed-income instruments for capital preservation and yield</div>
-        <div class="fc-desc">Certificates of Deposit (CDs) are short-term fixed-income instruments issued by banks with a specific maturity and interest rate. GGC sources CDs from a universe of 50+ issuers globally, benchmarked against Treasury/EURIBOR/BBSW reference rates. All listed issuers carry investment-grade ratings (P-1/P-2 Moody's, A-1/A-2 S&P, F1/F2 Fitch). Available in USD, EUR, GBP, CAD, and AUD.</div>
-      </div>
-
-      <div class="feature-card">
-        <div class="fc-tag tag-investor">USD CDs — vs Treasury Benchmarks</div>
-        <div class="fc-title">6M: vs 3.72% Treasury &nbsp;|&nbsp; 12M: vs 3.60% Treasury</div>
-        <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:10px;">
-          <thead>
-            <tr style="border-bottom:1px solid var(--border);">
-              <th style="padding:5px;text-align:left;color:var(--gold);">Issuer (6M USD)</th>
-              <th style="padding:5px;text-align:center;color:var(--gold);">Rating</th>
-              <th style="padding:5px;text-align:center;color:var(--gold);">Rate</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">Qatar National Bank London</td>
-              <td style="padding:5px;text-align:center;">A-1 / P-1 / F1</td>
-              <td style="padding:5px;text-align:center;color:var(--gold-light);">3.29%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">Abu Dhabi Commercial Bank</td>
-              <td style="padding:5px;text-align:center;">A-1 / P-1 / F1</td>
-              <td style="padding:5px;text-align:center;color:var(--gold-light);">3.16%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">Banco Santander</td>
-              <td style="padding:5px;text-align:center;">A-1 / P-1 / F1</td>
-              <td style="padding:5px;text-align:center;">3.18%</td>
-            </tr>
-            <tr>
-              <td style="padding:5px;">First Abu Dhabi Bank (12M)</td>
-              <td style="padding:5px;text-align:center;">A-1+ / P-1 / F1+</td>
-              <td style="padding:5px;text-align:center;color:var(--gold-light);">3.05%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="feature-card">
-        <div class="fc-tag tag-investor">GBP CDs — vs UK Gilt Benchmarks</div>
-        <div class="fc-title">6M: vs 4.07% UK Bond &nbsp;|&nbsp; 12M: vs 3.87% Gilt</div>
-        <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:10px;">
-          <thead>
-            <tr style="border-bottom:1px solid var(--border);">
-              <th style="padding:5px;text-align:left;color:var(--gold);">Issuer (GBP)</th>
-              <th style="padding:5px;text-align:center;color:var(--gold);">Rating</th>
-              <th style="padding:5px;text-align:center;color:var(--gold);">Rate</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">Qatar National Bank London (6M)</td>
-              <td style="padding:5px;text-align:center;">A-1 / P-1 / F1</td>
-              <td style="padding:5px;text-align:center;color:var(--gold-light);">3.43%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">First Abu Dhabi Bank (6M)</td>
-              <td style="padding:5px;text-align:center;">A-1+ / P-1 / F1+</td>
-              <td style="padding:5px;text-align:center;color:var(--gold-light);">3.39%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">Aareal Bank AG (12M)</td>
-              <td style="padding:5px;text-align:center;">P-2 / F2</td>
-              <td style="padding:5px;text-align:center;">3.46%</td>
-            </tr>
-            <tr>
-              <td style="padding:5px;">Abu Dhabi Commercial Bank (12M)</td>
-              <td style="padding:5px;text-align:center;">A-1 / P-1 / F1</td>
-              <td style="padding:5px;text-align:center;">3.41%</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="example-box" style="margin-top:14px;"><strong>Also available:</strong> EUR (vs EURIBOR 2.10%/2.20%), CAD (vs Treasury Bill 2.40%), and AUD (vs BBSW 3.90%). GCC-region banks including Qatar National Bank and Abu Dhabi Commercial Bank appear consistently across all currencies — particularly relevant for GCC-based investors.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ══════════════ FUND LINKED NOTES ══════════════ -->
-  <div id="panel-fln" class="panel">
-    <div class="section-title">Fund-Linked Participation Notes</div>
-    <div class="section-sub">100% capital-protected exposure to premium funds — fixed income, equity, and thematic — with leveraged upside</div>
-
-    <div class="feature-grid">
-      <div class="feature-card full">
-        <div class="fc-tag tag-all">The Structure</div>
-        <div class="fc-title">Access institutional funds with built-in capital protection</div>
-        <div class="fc-desc">The Capital Guaranteed Participation Note wraps a fund (managed by BlackRock, PIMCO, JPMorgan, Goldman Sachs, etc.) in a 5-year structured note with <strong style="color:var(--text);font-weight:600">100% capital protection at maturity</strong> (subject to issuer credit risk). The investor gains <em>leveraged</em> upside participation (often 100–123%) in the fund's positive performance, capped or uncapped depending on the structure.<br><br>
-        <strong>Payoff:</strong> Fund up → 100% + (Leverage × Fund Performance) &nbsp;|&nbsp; Fund down → 100% back</div>
-      </div>
-
-      <div class="feature-card">
-        <div class="fc-tag tag-investor">Fixed Income Funds (5Y USD)</div>
-        <div class="fc-title">Selected pricings</div>
-        <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:10px;">
-          <thead>
-            <tr style="border-bottom:1px solid var(--border);">
-              <th style="padding:5px;text-align:left;color:var(--gold);">Fund</th>
-              <th style="padding:5px;text-align:center;color:var(--gold);">Part.</th>
-              <th style="padding:5px;text-align:center;color:var(--gold);">Cap</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">PIMCO GIS Low Duration IG Credit</td>
-              <td style="padding:5px;text-align:center;">101%</td>
-              <td style="padding:5px;text-align:center;color:var(--teal);">Uncapped</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">Capital Group Global High Inc Opps</td>
-              <td style="padding:5px;text-align:center;">112%</td>
-              <td style="padding:5px;text-align:center;color:var(--teal);">Uncapped</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">JPMorgan Income Fund</td>
-              <td style="padding:5px;text-align:center;">100%</td>
-              <td style="padding:5px;text-align:center;">155.4%</td>
-            </tr>
-            <tr>
-              <td style="padding:5px;">Barings Global Senior Secured Bond</td>
-              <td style="padding:5px;text-align:center;">100%</td>
-              <td style="padding:5px;text-align:center;">163.5%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="feature-card">
-        <div class="fc-tag tag-investor">Equity & Thematic Funds (5Y USD)</div>
-        <div class="fc-title">Growth, emerging markets, and thematic</div>
-        <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:10px;">
-          <thead>
-            <tr style="border-bottom:1px solid var(--border);">
-              <th style="padding:5px;text-align:left;color:var(--gold);">Fund</th>
-              <th style="padding:5px;text-align:center;color:var(--gold);">Part.</th>
-              <th style="padding:5px;text-align:center;color:var(--gold);">Cap</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">AB American Growth (AllianceBernstein)</td>
-              <td style="padding:5px;text-align:center;color:var(--gold-light);">123%</td>
-              <td style="padding:5px;text-align:center;color:var(--teal);">Uncapped</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">GS Emerging Markets Equity</td>
-              <td style="padding:5px;text-align:center;">101%</td>
-              <td style="padding:5px;text-align:center;color:var(--teal);">Uncapped</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">Allianz Global Artificial Intelligence</td>
-              <td style="padding:5px;text-align:center;">100%</td>
-              <td style="padding:5px;text-align:center;color:var(--gold-light);">292%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-              <td style="padding:5px;">HSBC GIF Global Infrastructure Equity</td>
-              <td style="padding:5px;text-align:center;">100%</td>
-              <td style="padding:5px;text-align:center;">173.4%</td>
-            </tr>
-            <tr>
-              <td style="padding:5px;">JPMorgan Global Select Equity</td>
-              <td style="padding:5px;text-align:center;">112%</td>
-              <td style="padding:5px;text-align:center;color:var(--teal);">Uncapped</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="example-box" style="margin-top:12px;"><strong>How to read the cap:</strong> "292%" on the AI fund means if the fund gains 50%, the investor receives 100% + 50% = 150% at maturity. The cap is reached only if the fund appreciates by 192% — a 5-year fund return that would historically be extraordinary.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ══════════════ ACTIVELY MANAGED CERTIFICATES ══════════════ -->
-  <div id="panel-amc" class="panel">
-    <div class="section-title">Actively Managed Certificates (AMCs)</div>
-    <div class="section-sub">Securitised portfolio management — the flexible alternative to a fund, available in 2–4 weeks</div>
-
-    <div class="feature-grid">
-      <div class="feature-card full">
-        <div class="fc-tag tag-all">What is an AMC?</div>
-        <div class="fc-title">A tradeable certificate that tracks an actively managed strategy</div>
-        <div class="fc-desc">An Actively Managed Certificate (AMC) is a financial instrument that allows an <strong style="color:var(--text);font-weight:600">Index Sponsor</strong> (asset manager, family office, wealth manager) to wrap an investment strategy into a securitised, ISIN-coded product. The AMC issuer executes trades and rebalancings based on the sponsor's instructions, without requiring the sponsor to set up a full fund.<br><br>
-        AMCs are <strong style="color:var(--text);font-weight:600">cost-efficient</strong> (saving custodian bank trading fees), <strong style="color:var(--text);font-weight:600">quick to market</strong> (2–4 weeks for first issuance), and <strong style="color:var(--text);font-weight:600">flexible</strong> (any asset class from bonds to derivatives). They are traded as securities with real-time Bloomberg prices.</div>
-
-        <div class="flow" style="margin-top:20px;">
-          <div class="flow-box"><strong>Index Sponsor</strong><small>Strategy &amp; rebalancing instructions</small></div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-box highlight"><strong>AMC Gateway</strong><small>Routes instructions</small></div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-box"><strong>AMC Issuer</strong><small>Executes trades</small></div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-box highlight"><strong>ISIN-coded AMC</strong><small>Distributed to investors</small></div>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="fc-tag tag-investor">Three Issuer Structures</div>
-        <div class="fc-title">Luxembourg SPV · Guernsey SPV · Bank</div>
-        <div class="fc-desc">
-          <strong style="color:var(--text);font-weight:600">Luxembourg SPV</strong> — No issuer risk. XS ISIN under English law. Available to retail AND professional investors.<br><br>
-          <strong style="color:var(--text);font-weight:600">Guernsey SPV</strong> — No issuer risk. CH ISIN under Swiss law. Professional investors only.<br><br>
-          <strong style="color:var(--text);font-weight:600">Bank-issued</strong> — Carries issuer risk (mitigable via Triparty Collateral Management). CH ISIN. Professional investors only.<br><br>
-          Both SPV structures are <strong style="color:var(--text);font-weight:600">bankruptcy-remote</strong> — the underlying assets are segregated from the issuer balance sheet, meaning investors are protected if the issuer defaults.
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="fc-tag tag-broker">Key Benefits Summary</div>
-        <div class="fc-title">Why sponsors and investors choose AMCs</div>
-        <div class="fc-desc">
-          <strong style="color:var(--text);font-weight:600">Single-entry point:</strong> The AMC sponsor handles all implementation, execution, and reporting through one relationship.<br><br>
-          <strong style="color:var(--text);font-weight:600">Reduced administration:</strong> Centralised rebalancing bypasses individual trade processing with custodian banks — saving substantial fees at scale.<br><br>
-          <strong style="color:var(--text);font-weight:600">Asset class flexibility:</strong> Bonds, equities, ETFs, funds, structured products, FX, private bonds — any combination.<br><br>
-          <strong style="color:var(--text);font-weight:600">Liquidity:</strong> Issuer provides a secondary market with real-time bid/ask prices published on Bloomberg. Investors can exit without waiting for a fund redemption window.<br><br>
-          <strong style="color:var(--text);font-weight:600">Typical timeline:</strong> First AMC ready in 2–4 weeks. Subsequent launches in under 1 week.
-        </div>
-        <div class="example-box">
-          <strong>Ideal use cases:</strong> A family office wanting to run a concentrated equity strategy across multiple client accounts without setting up a fund. A hedge fund manager wanting to distribute a liquid alternatives strategy to private banks in Switzerland. An asset manager wanting to securitise a private credit portfolio.
-        </div>
-      </div>
-    </div>
+    <div class="panel-sim-slot" id="sim-slot-amc"></div>
   </div>
 
   <!-- ══════════════ SIMULATOR ══════════════ -->
   <div id="panel-simulator" class="panel">
-    <div class="section-title">Scenario Simulator</div>
-    <div class="section-sub">Test how different structures perform across market scenarios</div>
+    <div class="section-title">Scenario Explorer</div>
+    <div class="section-sub">Free-form simulator — compare any structure, or explore early-exit and issuer default scenarios</div>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:20px;">Each product panel also has its own simulator embedded at the bottom. Use this panel to explore special scenarios or compare products freely.</p>
 
-    <div class="sim-wrap">
+    <div class="sim-wrap" id="globalSimWrap">
       <div class="sim-title">▸ Interactive Payoff Calculator</div>
       <div class="sim-controls">
-        <div>
+        <div id="structTypeRow">
           <label>Structure type</label>
           <select id="structType" onchange="updateParamControls();calcScenario();">
             <optgroup label="── Equity-Linked ──">
@@ -1975,11 +1845,15 @@
             </optgroup>
             <optgroup label="── Credit &amp; Income ──">
               <option value="cln">Credit-Linked Note — 5Y · 7.20% p.a. · iTraxx Main S44 · Attachment: 3 events · Detachment: 6 events</option>
-              <option value="cd">Certificate of Deposit — 6M · 3.40% p.a. fixed · no market risk · no strike</option>
+              <option value="cd">Certificate of Deposit — 6M · 3.40% p.a. fixed · no equity-market risk · no strike</option>
             </optgroup>
             <optgroup label="── Funds &amp; Solutions ──">
               <option value="fln">Fund-Linked Note — 5Y · Strike = fund initial NAV · 100% floor · 112% participation · JPM Global Equity</option>
               <option value="amc">Actively Managed Certificate — Strike = initial NAV · 1-for-1 tracking · no protection</option>
+            </optgroup>
+            <optgroup label="── Special Scenarios ──">
+              <option value="earlysell">Sold Before Maturity — market impact on secondary price</option>
+              <option value="issuerdefault">Issuer Default — what happens to capital protection</option>
             </optgroup>
           </select>
         </div>
@@ -2040,6 +1914,31 @@
   <div id="panel-comparison" class="panel">
     <div class="section-title">Full Feature Comparison</div>
     <div class="section-sub">All structures at a glance — benefits by stakeholder</div>
+
+    <div class="feature-card full" style="margin-bottom:20px;">
+      <div class="fc-tag tag-all">What you want vs what you give up</div>
+      <div class="fc-title">Every structured product is a trade. Understand the exchange before buying.</div>
+      <div style="overflow-x:auto;margin-top:12px;">
+        <table>
+          <thead>
+            <tr>
+              <th style="padding:10px 14px;text-align:left;">What the investor wants</th>
+              <th style="padding:10px 14px;text-align:left;">What they give up</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:9px 14px;">Higher coupon (Phoenix, worst-of)</td><td style="padding:9px 14px;">Coupon is conditional — missed if worst-of below barrier; capital at risk from worst-of stock</td></tr>
+            <tr><td style="padding:9px 14px;">Guaranteed income (Reverse Convertible)</td><td style="padding:9px 14px;">Capital loss if index below low strike at maturity; geared loss below the strike</td></tr>
+            <tr><td style="padding:9px 14px;">Capital protection at maturity</td><td style="padding:9px 14px;">Lower upside participation (cap); no income; issuer credit risk; protection only at maturity — not if sold early</td></tr>
+            <tr><td style="padding:9px 14px;">Absolute return in down markets (Twin Win)</td><td style="padding:9px 14px;">Upside capped; no coupon; large falls beyond barrier give full index loss</td></tr>
+            <tr><td style="padding:9px 14px;">Worst-of basket yield premium</td><td style="padding:9px 14px;">One bad stock can determine the entire capital outcome regardless of others' performance</td></tr>
+            <tr><td style="padding:9px 14px;">Early redemption (Autocall)</td><td style="padding:9px 14px;">Reinvestment risk — must redeploy at prevailing rates; stops earning coupons; upside capped at autocall level</td></tr>
+            <tr><td style="padding:9px 14px;">Credit yield above risk-free (CLN)</td><td style="padding:9px 14px;">Credit events in reference basket can reduce capital; issuer default risk on top of reference entity risk</td></tr>
+            <tr><td style="padding:9px 14px;">Strategy access via AMC</td><td style="padding:9px 14px;">No capital protection; full strategy risk; performance depends entirely on the Index Sponsor</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
     <div class="feature-card" style="overflow-x:auto;">
       <table>
@@ -2169,11 +2068,41 @@
 </div>
 
 <script>
+const PRODUCT_PANEL_TYPES = {
+  autocall:'autocall', phoenix:'phoenix', barrier:'barrier',
+  rc:'rc', worstof:'worstof', twinwin:'twinwin', capital:'capital',
+  cln:'cln', cd:'cd', fln:'fln', amc:'amc'
+};
+
 function switchTab(name, btn) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
   if (btn) btn.classList.add('active');
-  document.getElementById('panel-' + name).classList.add('active');
+  const panel = document.getElementById('panel-' + name);
+  panel.classList.add('active');
+
+  const simWrap = document.getElementById('globalSimWrap');
+  const typeRow  = document.getElementById('structTypeRow');
+  const structEl = document.getElementById('structType');
+
+  if (PRODUCT_PANEL_TYPES[name]) {
+    const slot = document.getElementById('sim-slot-' + name);
+    if (slot && simWrap) {
+      slot.appendChild(simWrap);
+      typeRow.style.display = 'none';
+      structEl.value = name;
+      updateParamControls();
+      calcScenario();
+    }
+  } else if (name === 'simulator') {
+    if (panel && simWrap) {
+      const featureCard = panel.querySelector('.feature-card');
+      panel.insertBefore(simWrap, featureCard);
+      typeRow.style.display = '';
+      updateParamControls();
+      calcScenario();
+    }
+  }
 }
 
 function updateSlider() {
@@ -2209,6 +2138,8 @@ const PRODUCT_CTRL_KEYS = {
   cd:       ['cdRate'],
   fln:      ['participation'],
   amc:      [],
+  earlysell:    [],
+  issuerdefault:[],
 };
 
 // GGC prospectus defaults
@@ -2224,6 +2155,8 @@ const CTRL_DEFAULTS = {
   cd:       { cdRate: 3.40 },
   fln:      { participation: 112 },
   amc:      {},
+  earlysell:    {},
+  issuerdefault:{},
 };
 
 // Persisted per-product per-control values
@@ -2902,7 +2835,7 @@ function calcScenario() {
 
     setParams(
       'N/A (fixed rate — no price reference)',
-      'N/A', 'N/A', 'N/A (no market risk)', 'N/A',
+      'N/A', 'N/A', 'N/A (no equity-market risk)', 'N/A',
       rate.toFixed(2) + '% p.a. fixed (' + coupon.toFixed(2) + '% for 6M)',
       '6 Months (fixed term)',
       'QNB London / Abu Dhabi Commercial Bank'
@@ -2913,10 +2846,10 @@ function calcScenario() {
       + edge('Adjusting the rate slider — different issuer/tenor options',
         'QNB London 6M USD: 3.29% p.a. Abu Dhabi CB 6M: 3.16%. GBP 6M (QNB London): 3.43%. AUD 6M: ~3.90% (BBSW-linked). '
         + 'Use the rate slider to model any fixed-income scenario. All issuers: P-1/A-1 rated (highest short-term credit tier).')
-      + edge('Risk profile: issuer credit only — no market risk',
+      + edge('Risk profile: issuer credit only — no equity-market risk',
         'A CD investor faces exactly one risk: will the issuer repay at maturity? '
         + 'With P-1/A-1 issuers, this risk is negligible (probability of 6-month default < 0.01% historically). '
-        + 'No duration risk (held to maturity), no market risk, no volatility exposure.')
+        + 'No duration risk (held to maturity), no equity-market risk, no volatility exposure.')
       + edge('How to use CDs in a portfolio',
         'CDs are typically used to park cash between structured product investments, '
         + 'earning a return while awaiting the next opportunity. '
@@ -2978,6 +2911,71 @@ function calcScenario() {
     setVsStrike(pct(perf * 100), 'vs initial fund NAV (strike)');
 
   // ══════════════════════════════════════════════════════════
+  } else if (type === 'earlysell') {
+    // Selling before maturity — secondary market risk
+    const daysHeld = Math.round((perf + 0.7) / 1.7 * 1825); // slider maps to 0-5Y
+    const marketMove = perf;  // slider = market direction during holding period
+    setParams(
+      'N/A — depends on original product',
+      'N/A', 'N/A', 'N/A', 'N/A',
+      'Secondary market price only',
+      'N/A — exit at any time',
+      'Any structured note (illustrative)'
+    );
+    const yearsHeld = daysHeld / 365;
+    // Secondary price is rough: time value decay + market mark
+    const timeDecay = Math.max(0, 1 - yearsHeld / 5) * 5; // illiquidity cost
+    const marketImpact = perf * 70; // market has ~70% impact on secondary price
+    retPct = 100 + marketImpact - timeDecay;
+    retPct = Math.max(40, Math.min(140, retPct));
+    scenarioName = 'Sold early — secondary market price (' + (yearsHeld.toFixed(1)) + ' years held)';
+    htmlExp = '<strong>Capital protection applies at maturity only — not on early exit.</strong><br><br>'
+      + 'When a structured note is sold before maturity, the investor receives the <strong>prevailing secondary market price</strong>, which reflects:<br><br>'
+      + '1. <strong>Market conditions</strong> — if markets are down, the secondary price will be below par, even if the note has not breached any barrier yet.<br>'
+      + '2. <strong>Time value</strong> — early in the note\'s life, the option component has significant time value. Selling eliminates this.<br>'
+      + '3. <strong>Issuer bid/ask spread</strong> — typically 0.5–2% depending on structure and market conditions.<br>'
+      + '4. <strong>Funding and hedging costs</strong> — the issuer must unwind their hedge, which may be costly in stressed markets.<br><br>'
+      + 'Estimated secondary price in this scenario: <strong>' + retPct.toFixed(1) + '%</strong> (illustrative — actual prices depend on the specific product and market conditions).'
+      + edge('Rule of thumb for early exit',
+        'If you bought a 2Y capital-protected note and markets are down 15% after 6 months, the secondary price may be 88–92% of par — even though the note would pay 100% at maturity. '
+        + 'The 100% floor is only accessible by holding to maturity. '
+        + 'Treat all structured products as held-to-maturity instruments unless you are explicitly comfortable with secondary market risk.')
+      + edge('When selling before maturity makes sense',
+        'If the note has autocalled near par and you want to redeploy. '
+        + 'If markets have moved strongly in your favour and the secondary price exceeds your target return. '
+        + 'If circumstances have changed and you cannot hold to maturity. '
+        + 'In all cases: get a firm secondary market quote from the issuer before deciding.');
+
+  } else if (type === 'issuerdefault') {
+    // Issuer default scenario
+    const recoveryRate = Math.round((perf + 0.7) / 1.7 * 90); // slider maps to 0-90% recovery
+    retPct = recoveryRate;
+    setParams(
+      'N/A — issuer credit risk, not market level',
+      'N/A', 'N/A', 'N/A', 'N/A',
+      'Recovery value only — all coupon/protection may fail',
+      'At time of default',
+      'Any issuing bank (illustrative)'
+    );
+    scenarioName = 'Issuer defaults — ~' + recoveryRate + '% recovery (illustrative)';
+    htmlExp = '<strong>If the issuing bank defaults, capital protection and coupons may not be paid — regardless of market conditions.</strong><br><br>'
+      + 'In a bank default, the structured note becomes a claim against the issuer\'s estate. Recovery depends on:'
+      + '<br>1. <strong>Seniority</strong> — structured notes are typically senior unsecured debt. Recovery varies by jurisdiction and insolvency waterfall.<br>'
+      + '2. <strong>Asset backing</strong> — Luxembourg/Guernsey SPV structures (AMCs) are bankruptcy-remote; the underlying assets are segregated and not part of the issuer estate. SPV investors may recover more.<br>'
+      + '3. <strong>Deposit protection</strong> — CDs from banks may be protected by deposit guarantee schemes up to certain limits (e.g. FSCS £85,000 in the UK), unlike structured notes.<br>'
+      + '4. <strong>Recovery rate</strong> — senior unsecured bank bonds historically recover 20–60% in bankruptcy. The slider simulates different recovery assumptions.<br><br>'
+      + 'Estimated recovery: <strong>' + recoveryRate + '%</strong> of capital invested (illustrative). All coupons and capital protection terms are voided.'
+      + edge('How GGC mitigates issuer risk',
+        'By sourcing from 27+ A/A+ rated investment-grade issuers, GGC avoids single-issuer concentration. '
+        + 'A/A+ rated banks have a 5-year default probability of ~0.05–0.10% historically. '
+        + 'Clients can also diversify across multiple issuers for the same product type. '
+        + 'An issuer rating is not a guarantee — but it is a strong indicator of creditworthiness.')
+      + edge('Practical consequence for capital-protected notes',
+        'If you hold a 100% capital-protected note from Bank X and Bank X defaults: '
+        + 'the 100% protection is worthless. You become an unsecured creditor of Bank X. '
+        + 'This is why the GGC prospectus states capital protection is "subject to issuer credit risk" — '
+        + 'it is not a government guarantee or deposit protection scheme coverage.');
+
   } else { // amc
     retPct = 100 + perf * 100;
 
@@ -3024,6 +3022,8 @@ function calcScenario() {
     setVsStrike(pct(perf * 100), 'vs 100% initial NAV (strike)');
   }
 
+
+
   // ── Update results cards ──────────────────────────────────
   const pnl = retPct - 100;
   const retEl = document.getElementById('ret');
@@ -3055,10 +3055,11 @@ function toggleTheme() {
   }
 }
 
-// Init
-updateParamControls();
+// Init — move simulator into first product panel
 updateSlider();
-calcScenario();
+// Trigger the first tab navigation to wire up the simulator
+const firstProductBtn = document.querySelector('.tab-btn[onclick*="autocall"]');
+switchTab('autocall', firstProductBtn);
 </script>
 
 </div><!-- /content -->
