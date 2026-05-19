@@ -99,7 +99,7 @@
   header {
     background: #ffffff;
     border-bottom: 2px solid var(--border);
-    padding: 48px 40px 36px;
+    padding: 48px clamp(16px, 4vw, 40px) 36px;
     position: relative;
     overflow: hidden;
   }
@@ -139,8 +139,8 @@
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 28px 32px;
-    margin: 32px 40px;
+    padding: clamp(20px, 3vw, 28px) clamp(16px, 3vw, 32px);
+    margin: 32px clamp(16px, 4vw, 40px);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
@@ -161,9 +161,10 @@
   .page-body {
     display: flex;
     align-items: flex-start;
+    min-width: 0;
   }
   .sidebar {
-    width: 220px;
+    width: clamp(200px, 22vw, 240px);
     flex-shrink: 0;
     background: #f9f7f2;
     border-right: 1px solid var(--border);
@@ -200,7 +201,9 @@
     padding: 9px 20px 9px 17px;
     cursor: pointer;
     transition: all 0.15s;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.45;
   }
   .tab-btn:hover {
     color: var(--text);
@@ -216,12 +219,12 @@
   /* ── MAIN CONTENT ── */
   .content {
     flex: 1;
-    padding: 40px;
+    padding: clamp(20px, 4vw, 40px);
     min-width: 0;
   }
   @media(max-width:800px){
     .page-body { flex-direction: column; }
-    .sidebar { width: 100%; min-height: auto; position: static; border-right: none; border-bottom: 1px solid var(--border); padding: 16px 0; display: flex; flex-wrap: wrap; gap: 0; }
+    .sidebar { width: 100%; min-height: auto; position: static; border-right: none; border-bottom: 1px solid var(--border); padding: 16px 0; display: flex; flex-wrap: wrap; gap: 0; max-height: none; overflow: visible; }
     .sidebar-label { padding: 8px 12px 4px; width: 100%; }
     .tab-btn { width: auto; border-left: none; border-bottom: 2px solid transparent; padding: 8px 12px; }
     .tab-btn.active { border-left-color: transparent; border-bottom-color: var(--gold); }
@@ -419,6 +422,13 @@
   .pill-red   { background: rgba(230,57,70,0.15);  color: var(--red); }
   .pill-gold  { background: rgba(201,168,76,0.15); color: var(--gold); }
   .pill-teal  { background: rgba(42,157,143,0.15); color: var(--teal); }
+
+
+  .table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
   /* ── FLOW DIAGRAM ── */
   .flow {
@@ -872,7 +882,7 @@
       <div class="fc-tag tag-all">Decision Guide — What does your client need?</div>
       <div class="fc-title">Match investor objective to product family</div>
       <div class="fc-desc" style="margin-bottom:14px;">Start here before choosing a structure. The right product depends on what the investor wants — not on the mechanics.</div>
-      <div style="overflow-x:auto;">
+      <div class="table-scroll">
         <table>
           <thead>
             <tr>
